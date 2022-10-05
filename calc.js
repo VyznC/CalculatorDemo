@@ -27,14 +27,14 @@ keys.forEach((btn) => {
 })
 
 del.addEventListener('click', () => {
-    if (char.length == 1) {
+    if (char.length < 2) {
         console.log('empty')
-sendRes(0)
+        char.pop()
+        sendRes(0)
     } else {
         char.pop();
         sendRes(char.join(''))
         console.log(char);
-    
     }
    
 })
